@@ -49,7 +49,7 @@ public class Function {
         protected String doInBackground(String... params) {
             try {
                 String respon;
-                String url = "http://venolfkhua.com/api/registid.php";
+                String url = "http://api.olimpiade.id/api/registid.php";
 
                 Log.i(TAG, "FAILED"+SaveSharedPreference.getUser(context));
 
@@ -84,7 +84,7 @@ public class Function {
         protected String doInBackground(String... params) {
             try {
 
-                String url = "http://venolfkhua.com/api/login.php";
+                String url = "http://api.olimpiade.id/api/login.php";
 
                 List<NameValuePair> myPair = new ArrayList<NameValuePair>();
                 myPair.add(new BasicNameValuePair("username", username));
@@ -93,11 +93,9 @@ public class Function {
                 jsonParser.setMyPair(myPair);
                 jsonParser.setResponse(jsonParser.exec(url));
                 respon = jsonParser.getResponse();
-
             } catch (Exception e) {
                 Log.i(TAG, "FAILED");
             }
-
             return null;
         }
 
